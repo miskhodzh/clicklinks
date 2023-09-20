@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.contrib import auth
 from .forms import UserLoginForm, UserRegistrationForm
 
@@ -13,6 +13,7 @@ def login(request):
             user = auth.authenticate(username=username, password=password)
             if user:
                 auth.login(request, user)
+                return redirect(f'/{username}/')
     else:
         form = UserLoginForm()
 
@@ -28,6 +29,7 @@ def register(request):
         form = UserRegistrationForm(data=request.POST)
         if form.is_valid():
             form.save()
+            return redirect('/login/')
     else:
         form = UserRegistrationForm()
     context = {
