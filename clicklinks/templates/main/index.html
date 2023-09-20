@@ -19,7 +19,7 @@
         <meta name="twitter:card" content="summary_large_image" /> <!-- to have large image post format in Twitter -->
 
         <!-- Webpage Title -->
-        <title>ClickLinks09</title>
+        <title>ClickLinks</title>
 
         <!-- Styles -->
         <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -91,8 +91,8 @@
                 <div class="mb-16 lg:mt-32 xl:mt-40 xl:mr-12">
                     <h1 class="h1-large mb-5">У нас все ссылки в одном месте!</h1>
                     <p class="p-large mb-8">Разместите свои контактные данные на одной странице с нашим сервисом и получите быстрый доступ к ним!</p>
-                    <a class="btn-solid-lg" href="#your-link">Войти</a>
-                    <a class="btn-solid-lg secondary" href="#your-link">Зарегистрироваться</a>
+                    <a class="btn-solid-lg" href="{% url "login" %}">Войти</a>
+                    <a class="btn-solid-lg secondary" href="{% url "register" %}">Зарегистрироваться</a>
                 </div>
                 <div class="xl:text-right">
                     <img class="inline" src="{% static "images/header-smartphone.png" %}" alt="alternative" />
