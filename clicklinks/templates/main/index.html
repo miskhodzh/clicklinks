@@ -1,368 +1,42 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-        <!-- SEO Meta Tags -->
-        <meta name="description" content="Pavo is a mobile app Tailwind CSS HTML template created to help you present benefits, features and information about mobile apps in order to convince visitors to download them" />
-        <meta name="author" content="Your name" />
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "css/index.css" %}">
 
-        <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
-        <meta property="og:site_name" content="" /> <!-- website name -->
-        <meta property="og:site" content="" /> <!-- website link -->
-        <meta property="og:title" content="" /> <!-- title shown in the actual shared post -->
-        <meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
-        <meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
-        <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
-        <meta name="twitter:card" content="summary_large_image" /> <!-- to have large image post format in Twitter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 
-        <!-- Webpage Title -->
-        <title>ClickLinks</title>
-
-        <!-- Styles -->
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
-        <link href="{% static "css/fontawesome-all.css" %}" rel="stylesheet" />
-        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
-        <link href="{% static "css/swiper.css" %}" rel="stylesheet" />
-        <link href="{% static "css/magnific-popup.css" %}" rel="stylesheet" />
-        <link href="{% static "css/styles.css" %}" rel="stylesheet" />
-
-        <!-- Favicon  -->
-        <link rel="icon" href="{% static "images/favicon.png" %}" />
-    </head>
-    <body data-spy="scroll" data-target=".fixed-top">
-
-        <!-- Navigation -->
-        <nav class="navbar fixed-top">
-            <div class="container sm:px-4 lg:px-8 flex flex-wrap items-center justify-between lg:flex-nowrap">
-                
-                <!-- Text Logo - Use this if you don't have a graphic logo -->
-                <!-- <a class="text-gray-800 font-semibold text-3xl leading-4 no-underline page-scroll" href="index.html">Pavo</a> -->
-
-                <!-- Image Logo -->
-                <a class="inline-block mr-8 py-0.5 text-xl whitespace-nowrap hover:no-underline focus:no-underline" href="index.html">
-                    <img src="{% static "images/logo.svg" %}" alt="alternative" class="h-8" />
-                </a>
-
-                <button class="background-transparent rounded text-xl leading-none hover:no-underline focus:no-underline lg:hidden lg:text-gray-400" type="button" data-toggle="offcanvas">
-                    <span class="navbar-toggler-icon inline-block w-8 h-8 align-middle"></span>
-                </button>
-
-                <div class="navbar-collapse offcanvas-collapse lg:flex lg:flex-grow lg:items-center" id="navbarsExampleDefault">
-                    <ul class="pl-0 mt-3 mb-2 ml-auto flex flex-col list-none lg:mt-0 lg:mb-0 lg:flex-row">
-                        <li>
-                            <a class="nav-link page-scroll active" href="#header">Главная<span class="sr-only">(current)</span></a>
-                        </li>
-                        <li>
-                            <a class="nav-link page-scroll" href="#features">Что мы делаем</a>
-                        </li>
-                        <li>
-                            <a class="nav-link page-scroll" href="#details">О продукте</a>
-                        </li>
-                        <li>
-                            <a class="nav-link page-scroll" href="#pricing">Цены</a>
-                        </li>
-                        <!-- <li class="dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Drop</a>
-                            <div class="dropdown-menu" aria-labelledby="dropdown01">
-                                <a class="dropdown-item page-scroll" href="article.html">Article Details</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item page-scroll" href="terms.html">Terms Conditions</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item page-scroll" href="privacy.html">Privacy Policy</a>
-                            </div>
-                        </li> -->
-                        <li>
-                            <a class="nav-link page-scroll" href="#download">Начать</a>
-                        </li>
-                    </ul>
-                    
-                </div> <!-- end of navbar-collapse -->
-            </div> <!-- end of container -->
-        </nav> <!-- end of navbar -->
-        <!-- end of navigation -->
-
-        <!-- Header -->
-        <header id="header" class="header py-28 text-center md:pt-36 lg:text-left xl:pt-44 xl:pb-32">
-            <div class="container px-4 sm:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8">
-                <div class="mb-16 lg:mt-32 xl:mt-40 xl:mr-12">
-                    <h1 class="h1-large mb-5">У нас все ссылки в одном месте!</h1>
-                    <p class="p-large mb-8">Разместите свои контактные данные на одной странице с нашим сервисом и получите быстрый доступ к ним!</p>
-                    <a class="btn-solid-lg" href="{% url "login" %}">Войти</a>
-                    <a class="btn-solid-lg secondary" href="{% url "register" %}">Зарегистрироваться</a>
-                </div>
-                <div class="xl:text-right">
-                    <img class="inline" src="{% static "images/header-smartphone.png" %}" alt="alternative" />
-                </div>
-            </div> <!-- end of container -->
-        </header> <!-- end of header -->
-        <!-- end of header -->
-
-
-        <!-- Introduction -->
-        <div class="pt-4 pb-14 text-center">
-            <div class="container px-4 sm:px-8 xl:px-4">
-                <p class="mb-4 text-gray-800 text-3xl leading-10 lg:max-w-5xl lg:mx-auto"> Наш сервис - это ваш надежный партнер в организации интернет-ссылок! Мы создали удобный инструмент, позволяющий вам хранить все ваши важные ссылки на одной странице. </p>
-            </div> <!-- end of container -->
+    <title>ClickLinks</title>
+</head>
+<body>
+    <main>
+        <div class="logo">
+            ClickLinks
         </div>
-        <!-- end of introduction -->
-
-
-        <!-- Features -->
-        <div id="features" class="cards-1">
-            <div class="container px-4 sm:px-8 xl:px-4">
-
-                <!-- Card -->
-                <div class="card">
-                    <div class="card-image">
-                        <img src="{% static "images/features-icon-1.svg" %}" alt="alternative" />
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Эффективное управление ссылками</h5>
-                        <p class="mb-4">Наш сервис предоставляет удобный и эффективный способ хранить и организовывать все ваши ссылки на одной странице. Забудьте о путанице в закладках или текстовых файлах. С нашим сервисом вы легко найдете нужную ссылку в один миг.</p>
-                    </div>
-                </div>
-                <!-- end of card -->
-
-                <!-- Card -->
-                <div class="card">
-                    <div class="card-image">
-                        <img src="{% static "images/features-icon-2.svg" %}" alt="alternative" />
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Бесплатный доступ к основным возможностям</h5>
-                        <p class="mb-4">Мы предоставляем бесплатный доступ к ключевым функциям нашего сервиса, которых вполне достаточно для комфортного использования продукта. </p>
-                    </div>
-                </div>
-                <!-- end of card -->
-
-                <!-- Card -->
-                <div class="card">
-                    <div class="card-image">
-                        <img src="{% static "images/features-icon-3.svg" %}" alt="alternative" />
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Удобство использования</h5>
-                        <p class="mb-4">Наш сервис разработан с акцентом на простоту и удобство. Вы сможете легко добавлять, редактировать и управлять своими ссылками в несколько кликов. Никаких сложных настроек или технических навыков не требуется. У нас — интуитивно понятный и приятный интерфейс для всех пользователей.</p>
-                    </div>
-                </div>
-                <!-- end of card -->
-
-            </div> <!-- end of container -->
-        </div> <!-- end of cards-1 -->
-        <!-- end of features -->
-
-
-        <!-- Details 1 -->
-        <div id="details" class="pt-12 pb-16 lg:pt-16">
-            <div class="container px-4 sm:px-8 lg:grid lg:grid-cols-12 lg:gap-x-12">
-                <div class="lg:col-span-5">
-                    <div class="mb-16 lg:mb-0 xl:mt-16">
-                        <h2 class="mb-6">Улучшение онлайн-присутствия</h2>
-                        <p class="mb-4">Наш сервис помогает усилить ваше онлайн-присутствие, позволяя легко и удобно хранить и управлять ссылками на ваши социальные медиа профили и веб-ресурсы. Это способствует более эффективной работе с аудиторией и повышению узнаваемости вашего бренда.</p>
-                    </div>
-                </div> <!-- end of col -->
-                <div class="lg:col-span-7">
-                    <div class="xl:ml-14">
-                        <img class="inline" src="{% static "images/details-1.jpg" %}" alt="alternative" />
-                    </div>
-                </div> <!-- end of col -->
-            </div> <!-- end of container -->
+        <div class="info-block">
+            <h1>Создай свой сайт визитку</h1>
+            <img src="{% static "images/phone-1.png" %}" alt="">
+            <a href="#">Попробовать сейчас</a>
         </div>
-        <!-- end of details 1 -->
-
-
-        <!-- Details 2 -->
-        <div class="py-24">
-            <div class="container px-4 sm:px-8 lg:grid lg:grid-cols-12 lg:gap-x-12">
-                <div class="lg:col-span-7">
-                    <div class="mb-12 lg:mb-0 xl:mr-14">
-                        <img class="inline" src="{% static "images/details-2.jpg" %}" alt="alternative" />
-                    </div>
-                </div> <!-- end of col -->
-                <div class="lg:col-span-5">
-                    <div class="xl:mt-12">
-                        <h2 class="mb-6">Аналитика и отчетность</h2>
-                        <p class="mb-4">Мы предоставляем инструменты аналитики для отслеживания активности ваших ссылок. Вы сможете получать ценную информацию о том, какие ссылки пользуются наибольшей популярностью и вовлекают аудиторию. Это позволяет оптимизировать вашу стратегию в социальных сетях и бизнесе.</p>
-                        <!-- <a class="btn-solid-reg popup-with-move-anim mr-1.5" href="#details-lightbox">Lightbox</a>
-                        <a class="btn-outline-reg" href="article.html">Details</a> -->
-                    </div>
-                </div> <!-- end of col -->
-            </div> <!-- end of container -->
+        <div class="info-block">
+            <h1>Следи за статистикой посещений</h1>
+            <img src="{% static "images/phone-2.png" %}" alt="">
         </div>
-        <!-- end of details 2 -->
-
-
-        <!-- Details 3 -->
-        <div class="pt-16 pb-12">
-            <div class="container px-4 sm:px-8 lg:grid lg:grid-cols-12 lg:gap-x-12">
-                <div class="lg:col-span-5">
-                    <div class="mb-16 lg:mb-0 xl:mt-16">
-                        <h2 class="mb-6">Привлечение новой аудитории</h2>
-                        <p class="mb-4">Наш сервис способствует привлечению новой аудитории к вашим социальным сетям и бизнесу. Вы можете эффективно распространять ссылки на важные контентные страницы, акции и продукты, что помогает увеличивать число подписчиков и клиентов, повышая прибыль и расширяя влияние.</p>
-                    </div>
-                </div> <!-- end of col -->
-                <div class="lg:col-span-7">
-                    <div class="ml-14">
-                        <img class="inline" src="{% static "images/details-3.jpg" %}" alt="alternative" />
-                    </div>
-                </div> <!-- end of col -->
-            </div> <!-- end of container -->
+        <div class="info-block">
+            <h1>Позволь ИИ собрать тебе полноценный сайт-визитку</h1>
+            <img src="{% static "images/phone-3.png" %}" alt="">
         </div>
-        <!-- end of details 3 -->
-
-        <!-- Pricing -->
-        <div id="pricing" class="cards-2">
-            <div class="absolute bottom-0 h-40 w-full bg-white"></div>
-            <div class="container px-4 pb-px sm:px-8">
-                <h2 class="mb-2.5 text-white lg:max-w-xl lg:mx-auto">Выберите оптимальный тариф</h2>
-                <p class="mb-16 text-white lg:max-w-3xl lg:mx-auto"> Наша ценовая политика предоставляют возможность пользоваться основными возможностями ClickLinks бесплатно. Для особых потребностей у нас тоже есть решения </p>
-
-                <!-- Card-->
-                <div class="card">
-                    <div class="card-body">
-                        <div class="card-title">Бесплатный</div>
-                        <div class="price"><span class="currency">₽</span><span class="value">0</span></div>
-                        <div class="frequency">в месяц</div>
-                        <p>Использование базовых шаблонов, добавление ссыллок</p>
-                        <ul class="list mb-7 space-y-2 text-left">
-                            <li class="flex">
-                                <i class="fas fa-chevron-right"></i>
-                                <div>До 7 ссылок на странице</div>
-                            </li>
-                            <li class="flex">
-                                <i class="fas fa-chevron-right"></i>
-                                <div>5 бесплатных шаблонов</div>
-                            </li>
-                            <li class="flex">
-                                <i class="fas fa-chevron-right"></i>
-                                <div>10 цветовых палитр</div>
-                            </li>
-                            <!-- <li class="flex">
-                                <i class="fas fa-chevron-right"></i>
-                                <div style="color: rgb(255, 138, 138);">Присутствует реклама</div>
-                            </li> -->
-                        </ul>
-                        <div class="button-wrapper">
-                            <a class="btn-solid-reg page-scroll" href="#download">Начать</a>
-                        </div>
-                    </div>
-                </div> <!-- end of card -->
-                <!-- end of card -->
-
-                <!-- Card-->
-                <div class="card">
-                    <div class="card-body">
-                        <div class="card-title">Стандартный</div>
-                        <div class="price"><span class="currency">₽</span><span class="value">60</span></div>
-                        <div class="frequency">в месяц</div>
-                        <p>Доступ к премиум шаблонам, гибкие настройки</p>
-                        <ul class="list mb-7 space-y-2 text-left">
-                            <li class="flex">
-                                <i class="fas fa-chevron-right"></i>
-                                <div>До 15 ссылок на странице</div>
-                            </li>
-                            <li class="flex">
-                                <i class="fas fa-chevron-right"></i>
-                                <div>Доступны все шаблоны</div>
-                            </li>
-                            <li class="flex">
-                                <i class="fas fa-chevron-right"></i>
-                                <div>Ручная настройка цветов</div>
-                            </li>
-                            <li class="flex">
-                                <i class="fas fa-chevron-right"></i>
-                                <div>Нет рекламы</div>
-                            </li>
-                        </ul>
-                        <div class="button-wrapper">
-                            <a class="btn-solid-reg page-scroll" href="#download" style="background: gray">Пока в разработке</a>
-                        </div>
-                    </div>
-                </div> <!-- end of card -->
-                <!-- end of card -->
-
-                <!-- Card-->
-                <div class="card">
-                    <div class="card-body">
-                        <div class="card-title">Расширенный</div>
-                        <div class="price"><span class="currency">₽</span><span class="value">120</span></div>
-                        <div class="frequency">в месяц</div>
-                        <p>Свое фото на фон, интерактивные блоки</p>
-                        <ul class="list mb-7 text-left space-y-2">
-                            <li class="flex">
-                                <i class="fas fa-chevron-right"></i>
-                                <div>Неограниченное число ссылок</div>
-                            </li>
-                            <li class="flex">
-                                <i class="fas fa-chevron-right"></i>
-                                <div>Доступ к интерактивным блокам</div>
-                            </li>
-                            <li class="flex">
-                                <i class="fas fa-chevron-right"></i>
-                                <div>Онлайн консультант на основе искуственного интелекта</div>
-                            </li>
-                        </ul>
-                        <div class="button-wrapper">
-                            <a class="btn-solid-reg page-scroll" href="#download" style="background: gray">Пока в разработке</a>
-                        </div>
-                    </div>
-                </div> <!-- end of card -->
-                <!-- end of card -->
-
-            </div> <!-- end of container -->
-        </div> <!-- end of cards-2 -->
-        <!-- end of pricing -->
-
-
-        <!-- Conclusion -->
-        <div id="download" class="basic-5">
-            <div class="container px-4 sm:px-8 lg:grid lg:grid-cols-2">
-                <div class="mb-16 lg:mb-0">
-                    <img src="{% static "images/conclusion-smartphone.png" %}" alt="alternative" />
-                </div>
-                <div class="lg:mt-24 xl:mt-44 xl:ml-12">
-                    <p class="mb-9 text-gray-800 text-3xl leading-10">Мобильные ссылки - это удобно. Начни пользоваться уже сегодня!</p>
-                    <a class="btn-solid-lg" href="#your-link">Войти</a>
-                    <a class="btn-solid-lg secondary" href="#your-link">Зарегистрироваться</a>
-                </div>
-            </div> <!-- end of container -->
-        </div> <!-- end of basic-5 -->
-        <!-- end of conclusion -->
-
-
-        <!-- Footer -->
-        <div class="footer">
-            <div class="container px-4 sm:px-8">
-                <h4 class="mb-8 lg:max-w-3xl lg:mx-auto">ClickLinks - проект ИС-Инфологики. Вы можете связаться с нами по адресу <a class="text-indigo-600 hover:text-gray-500" href="mailto:email@domain.com">is.infologika@mail.ru</a></h4>
-            </div> <!-- end of container -->
-        </div> <!-- end of footer -->
-        <!-- end of footer -->
-
-
-        <!-- Copyright -->
-        <div class="copyright">
-            <div class="container px-4 sm:px-8 lg:grid lg:grid-cols-3">
-                <ul class="mb-4 list-unstyled p-small">
-                    <li class="mb-2"><a href="terms.html">Правила и условия</a></li>
-                    <li class="mb-2"><a href="privacy.html">Политика конфеденциальности</a></li>
-                </ul>
-                <p class="pb-2 p-small statement">Copyright © <a href="#your-link" class="no-underline">ИС-Инфологика</a></p>
-            </div> 
-
-        <!-- end of container -->
-        </div> <!-- end of copyright -->
-        <!-- end of copyright -->
-
-
-        <!-- Scripts -->
-        <script src="{% static "js/jquery.min.js" %}"></script> <!-- jQuery for JavaScript plugins -->
-        <script src="{% static "js/jquery.easing.min.js" %}"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
-        <script src="{% static "js/swiper.min.js" %}"></script> <!-- Swiper for image and text sliders -->
-        <script src="{% static "js/jquery.magnific-popup.js" %}"></script> <!-- Magnific Popup for lightboxes -->
-        <script src="{% static "js/scripts.js" %}"></script> <!-- Custom scripts -->
-    </body>
+        <div class="info-block">
+            <h1>Присоединяйся к нам уже сейчас</h1>
+            <a href="#">Присоединиться</a>
+        </div>
+    </main>
+    <img src="{% static "images/borderIPhone.svg" %}" class="border">
+</body>
+<img src="{% static "images/camera.svg" %}" class="camera">
 </html>
