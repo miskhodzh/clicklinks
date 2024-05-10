@@ -1,0 +1,11 @@
+{% extends "profile/base.html" %}
+{% load static %}
+{% block content %}
+<div class="username">{{request.user.username}}</div>
+<div class="links">
+    <a href="#">Кнопка</a>
+    <a href="#">Кнопка</a>
+    <a href="#">Кнопка</a>
+    <a href="#">Кнопка</a>
+</div>
+{% endblock content %}

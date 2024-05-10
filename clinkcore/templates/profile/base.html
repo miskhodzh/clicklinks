@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clicklinks</title>
+
+  <link rel="stylesheet" href="{% static "css/device.css" %}">
+  <link rel="stylesheet" href="{% static "css/links.css" %}">
+</head>
+
+<body style="background-color: #2c2b2b;">
+  <div class="place">
+    <div class="device">
+      <div class="menu_img">
+        <img src="{% static "img/menu.svg" %}" onclick="toogle_menu()">
+      </div>
+      <div class="nav hidden" id="menu_block">
+        <ul>
+          <li><a href="#">Выйти</a></li>
+          <li><a href="#">Настройки профиля</a></li>
+        </ul>
+      </div>
+      {% block content %}{% endblock content %}
+    </div>
+  </div>
+  <script src="{% static "js/device.js" %}"></script>
+</body>
+
+</html>
